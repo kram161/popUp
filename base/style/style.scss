@@ -1,20 +1,180 @@
 @font-face {
-  font-family: 'Gothampro';
-  src: url('../fonts/gothampro.eot');
-  src: local('☺'), url('../fonts/gothampro.woff') format('woff'), url('../fonts/gothampro.ttf') format('truetype'), url('../fonts/gothampro.svg') format('svg');
+  font-family: 'GothamPro';
+  src: url('../fonts/GothamPro.eot');
+  src: local('☺'), url('../fonts/GothamPro.woff') format('woff'), url('../fonts/GothamPro.ttf') format('truetype'), url('../fonts/GothamPro.svg') format('svg');
   font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GothamProBold';
+  src: url('../fonts/GothamPro-Bold.eot');
+  src: local('☺'), url('../fonts/GothamPro-Bold.woff') format('woff'), url('../fonts/GothamPro-Bold.ttf') format('truetype'), url('../fonts/GothamPro-Bold.svg') format('svg');
+  font-weight: 900;
   font-style: normal;
 }
 :root {
   font-size: 10px;
-  font-family: 'Gothampro', sans-serif;
+  font-family: 'GothamPro', sans-serif;
 }
 .container{
   max-width: 1440px;
   padding: 0 25px;
   margin:0 auto;
 }
+body{
+  margin: 0;
+}
+.colored-button{
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'GothamProBold', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 900;
+  color:#fff;
+  background: linear-gradient(92.64deg, #FF5621 29.24%, #F21313 83.67%);
+  border-radius: 4px;
+  padding: 16px 0;
+  border: none;
+  cursor: pointer;
+  display: block;
+}
 
+section{
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background: rgba(0, 0, 0, 0.1);
+}
+.pop-up{
+  position: absolute;
+  max-width: 750px;
+  max-height: 450px;
+  height: 100%;
+  width: 100%;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  display: flex;
+  background: #fff;
+  border-radius: 20px;
+  &__banner{
+    background: #EFEFEF;
+    position: relative;
+    max-width: 310px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px 0 0 20px;
+    h2{
+      font-family: 'GothamProBold', sans-serif;
+      font-size: 9.2rem;
+      font-weight: 900;
+      line-height: 88px;
+      mix-blend-mode: soft-light;
+      color:#000;
+      word-wrap: break-word;
+      margin:auto 12px;
+      text-align: right;
+    }
+    img{
+      display: block;
+      position: absolute;
+      top:46%;
+      left: 60%;
+      transform: translate(-60%,-46%);
+    }
+    svg{
+      position: absolute;
+    }
+  }
+  &__form{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding:28px 60px 63px 60px;
+    width: 100%;
+    h4,h5{
+      font-family: 'GothamProBold', sans-serif;
+      font-weight: 900;
+      font-size: 2.4rem;
+      margin: 0 0 42px 0;
+      text-transform: uppercase;
+    }
+    p{
+      font-size: 1.4rem;
+      font-weight: 400;
+      margin: 0;
+    }
+    h5{
+      font-size: 2.0rem;
+      margin: 7px 0 5px 0;
+      line-height: 22px;
+    }
+    a{
+      text-decoration: none;
+      font-family: 'GothamProBold', sans-serif;
+      font-weight: 700;
+      position: relative;
+      color:#000;
+      margin:0;
+      display: inline-block;
+    }
+    a:before{
+      left: 0;
+      bottom:0;
+      position: absolute;
+      width: 0;
+      height: 1px;
+      background: #000;
+      content: '';
+      transition: all 0.5s ease;
+    }
+    a:hover:before{
+      width: 100%;
+      transition: all 0.5s ease;
+    }
+    span{
+      margin: 12px 0 30px 0;
+      font-size: 1.2rem;
+      font-weight: 400;
+    }
+    label{
+      text-align: left;
+      margin: 0 0 6px 0;
+      font-size: 1.2rem;
+    }
+    input{
+      padding: 15px 18px;
+      font-family: 'GothamProBold', sans-serif;
+      font-weight: 700;
+      font-size: 1.4rem;
+      border: 2px solid #F3CE00;
+      box-sizing: border-box;
+      border-radius: 4px;
+      transition: all 0.5s ease;
+      outline: none;
+      margin: 0 0 15px 0;
+    }
+    input::placeholder{
+      font-family: 'GothamProBold', sans-serif;
+      font-weight: 700;
+      font-size: 1.4rem;
+      color:#000;
+    }
+    &__button{
+      display: flex;
+      position: relative;
+      button{
+        position: relative;
+      }
+      svg{
+        position: absolute;
+        bottom: -5px;
+        left: -140px;
+      }
+    }
+  }
+}
 
 @media screen and (max-width: 1200px){
 }
